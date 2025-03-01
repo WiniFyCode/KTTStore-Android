@@ -75,7 +75,7 @@ KTT Store là một ứng dụng thương mại điện tử được phát tri�
 ## Giao diện
 ### Login
 ![Screenshot 2025-02-15 201823](https://github.com/user-attachments/assets/83f5d69f-f560-4f53-a56d-f674d94bd46c)
-<img src="https://github.com/user-attachments/assets/83f5d69f-f560-4f53-a56d-f674d94bd46c" width="200">
+<img src="https://github.com/user-attachments/assets/83f5d69f-f560-4f53-a56d-f674d94bd46c" height="200">
 
 ### Register
 ![Screenshot 2025-02-15 201843](https://github.com/user-attachments/assets/689b6c62-44dd-4cc8-900c-ca3b20137871)
