@@ -76,7 +76,7 @@ KTT Store là một ứng dụng thương mại điện tử được phát tri�
 1. Clone repository:
 
 ```bash
-git clone https://github.com/your-username/kttstore-android.git
+git clone https://github.com/WiniFyCode/kttstore-android.git
 ```
 2. Mở project bằng Android Studio
 3. Sync Gradle và build project
