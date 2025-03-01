@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KTTStore" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.KTTStore" parent="Base.Theme.KTTStore" />
+
+    <style name="Theme.KTTStore.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="BottomNavigationStyle">
+        <item name="android:background">@color/nav_bg_color</item>
+        <item name="android:elevation">8dp</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconTint">@color/color_item_bottom_navigation</item>
+        <item name="itemTextColor">@color/color_item_bottom_navigation</item>
+        <item name="itemRippleColor">@color/nav_ripple_color</item>
+        <item name="itemActiveIndicatorStyle">@style/App.Custom.Indicator</item>
+        <item name="itemPaddingTop">8dp</item>
+        <item name="itemPaddingBottom">8dp</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/nav_indicator_color</item>
+        <item name="android:height">40dp</item>
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Skip button with ripple effect -->
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Bỏ qua"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Bottom container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Dots indicator with padding -->
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:padding="8dp" />
+
+        <!-- Next button with elevation -->
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/next_button_background"
+            android:elevation="4dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout> 

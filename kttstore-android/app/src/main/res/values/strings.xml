@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KTT Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="voucher_empty_state">Không có voucher nào</string>
+    <string name="voucher_usable">Có thể dùng</string>
+    <string name="voucher_used">Đã sử dụng</string>
+    <string name="voucher_expired">Hết hạn</string>
+</resources>

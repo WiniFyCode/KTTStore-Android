@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    android:orientation="vertical"
+    android:background="@color/Primary_blue_bg">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sản phẩm yêu thích"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/Primary_blue"/>
+
+    </LinearLayout>
+
+    <!-- Main content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_weight="1">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="8dp"
+                android:scrollbars="vertical"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!-- Empty state với thiết kế mới -->
+        <LinearLayout
+            android:id="@+id/emptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@color/Primary_blue_bg">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="@color/Primary_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Chưa có sản phẩm yêu thích"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/Primary_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Hãy thêm sản phẩm vào danh sách yêu thích của bạn"
+                android:textSize="14sp"
+                android:textColor="@color/Gray"
+                android:gravity="center"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinueShopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Tiếp tục mua sắm"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/Primary_blue"
+                app:cornerRadius="8dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

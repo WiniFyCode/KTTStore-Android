@@ -1,0 +1,15 @@
+public class Message {
+    private String id;
+    private String senderId;
+    private String content;
+    private long timestamp;
+    private boolean isSent; // true if sent by current user
+
+    public Message(String content, boolean isSent) {
+        this.content = content;
+        this.isSent = isSent;
+        this.timestamp = System.currentTimeMillis();
+    }
+
+    // Getters and setters
+} 

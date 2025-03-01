@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    
+    <!-- Bo tròn 4 góc -->
+    <corners android:radius="8dp" />
+    
+    <!-- Màu nền trắng -->
+    <solid android:color="@android:color/white" />
+    
+    
+</shape> 

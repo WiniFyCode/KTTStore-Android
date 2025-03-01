@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mặc định"
+                android:textColor="@color/Primary_blue"
+                android:background="@drawable/bg_default_tag"
+                android:padding="6dp"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/btnSetDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt làm mặc định"
+                android:textColor="@color/Primary_blue"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:background="?attr/selectableItemBackground" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sửa"
+                android:textColor="@color/Primary_blue"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa"
+                android:textColor="@color/Red"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:background="?attr/selectableItemBackground" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView> 

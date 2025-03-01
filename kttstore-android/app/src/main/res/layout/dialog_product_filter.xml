@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bộ lọc"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Sắp xếp -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sắp xếp theo"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Khoảng giá -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khoảng giá"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp">
+
+            <EditText
+                android:id="@+id/edtMinPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Từ"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edtMaxPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đến"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- Trạng thái kho -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái kho"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tất cả"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbInStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Còn hàng"/>
+
+        <RadioButton
+            android:id="@+id/rbOutOfStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hết hàng"/>
+    </RadioGroup>
+
+    <!-- Khuyến mãi -->
+    <CheckBox
+        android:id="@+id/chkPromotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỉ hiển thị sản phẩm có khuyến mãi"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Đặt lại"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Áp dụng"/>
+    </LinearLayout>
+
+</LinearLayout> 

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/Primary_blue_bg"
+    tools:context=".MenuFragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- App Bar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Primary_blue"
+            android:elevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="KTT Store"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Danh sách yêu thích"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_favorite_border"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Thanh tìm kiếm -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/Primary_blue"
+                app:strokeWidth="1dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        app:tint="@color/Primary_blue" />
+
+                    <TextView
+                        android:id="@+id/edtSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@null"
+                        android:hint="Tìm kiếm sản phẩm..."
+                        android:textSize="16sp"
+                        android:textColorHint="@android:color/darker_gray"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Banner quảng cáo -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/cardSearch" />
+
+            <!-- Indicator dots cho banner -->
+            <LinearLayout
+                android:id="@+id/layoutDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/viewPagerBanner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Danh mục sản phẩm -->
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Danh mục"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutDots" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_category" />
+
+            <!-- Sản phẩm nổi bật -->
+            <TextView
+                android:id="@+id/tvFeaturedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Sản phẩm nổi bật"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCategories" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFeaturedProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvFeaturedTitle"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_product_horizontal" />
+
+            <!-- Sản phẩm Nữ -->
+            <TextView
+                android:id="@+id/tvWomenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Dành cho Nữ"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFeaturedProducts" />
+
+            <!-- Nút Tất cả -->
+            <LinearLayout
+                android:id="@+id/btnWomenSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvWomenTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvWomenTitle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tất cả"
+                    android:textColor="@color/Primary_blue"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/Primary_blue" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWomenProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="16dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvWomenTitle"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_product_grid" />
+
+            <!-- Sản phẩm Nam -->
+            <TextView
+                android:id="@+id/tvMenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Dành cho Nam"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvWomenProducts" />
+
+            <!-- Nút Tất cả -->
+            <LinearLayout
+                android:id="@+id/btnMenSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvMenTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvMenTitle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tất cả"
+                    android:textColor="@color/Primary_blue"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/Primary_blue" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvMenTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_product_grid" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

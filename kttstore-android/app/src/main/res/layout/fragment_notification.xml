@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Primary_blue_bg">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông báo"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/Primary_blue" />
+
+            <TextView
+                android:id="@+id/txtUnreadCount"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/circle_indicator"
+                android:backgroundTint="@color/Primary_blue"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnMarkAllRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đánh dấu đã đọc"
+            android:textColor="@color/Primary_blue"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground" />
+
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="8dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="720dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/Primary_blue_bg">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/Primary_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Không có thông báo nào"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/Primary_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bạn sẽ nhận được thông báo về khuyến mãi và cập nhật mới"
+            android:textColor="@color/Gray"
+            android:textAlignment="center"
+            android:paddingHorizontal="32dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

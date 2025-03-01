@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Ảnh sản phẩm -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nút xóa -->
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/Gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Tên sản phẩm -->
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemove"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Container giá -->
+        <LinearLayout
+            android:id="@+id/priceContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName">
+
+            <TextView
+                android:id="@+id/txtFinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Red"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Container ghi chú -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toBottomOf="@+id/priceContainer">
+
+            <EditText
+                android:id="@+id/edtNote"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="Thêm ghi chú..."
+                android:textSize="13sp"
+                android:textColorHint="@color/Gray"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:background="@drawable/bg_edit_text"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btnSaveNote"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:src="@drawable/ic_save"
+                app:tint="@color/Primary_blue"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView> 
