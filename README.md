@@ -77,26 +77,26 @@ KTT Store là một ứng dụng thương mại điện tử được phát tri�
 <img src="https://github.com/user-attachments/assets/83f5d69f-f560-4f53-a56d-f674d94bd46c" height="400">
 
 ### Register
-<img src="https://github.com/user-attachments/assets/689b6c62-44dd-4cc8-900c-ca3b20137871" width="400">
+<img src="https://github.com/user-attachments/assets/689b6c62-44dd-4cc8-900c-ca3b20137871" height="400">
 
 ### Forgot Password
-<img src="https://github.com/user-attachments/assets/c09620fc-7d05-4986-bd2b-b095935beb46" width="400">
-<img src="https://github.com/user-attachments/assets/1af7c952-7b03-4495-941c-e14df6214f67" width="400">
+<img src="https://github.com/user-attachments/assets/c09620fc-7d05-4986-bd2b-b095935beb46" height="400">
+<img src="https://github.com/user-attachments/assets/1af7c952-7b03-4495-941c-e14df6214f67" height="400">
 
 ### Home
-<img src="https://github.com/user-attachments/assets/da481017-d36b-4a87-a999-a69c54eecaa6" width="400">
+<img src="https://github.com/user-attachments/assets/da481017-d36b-4a87-a999-a69c54eecaa6" height="400">
 
 ### Favorite
-<img src="https://github.com/user-attachments/assets/dfd88154-af44-4574-84a4-5e12ebca26e0" width="400">
+<img src="https://github.com/user-attachments/assets/dfd88154-af44-4574-84a4-5e12ebca26e0" height="400">
 
 ### Cart
-<img src="https://github.com/user-attachments/assets/20f64b40-901d-49b1-a442-158e1d584e78" width="400">
+<img src="https://github.com/user-attachments/assets/20f64b40-901d-49b1-a442-158e1d584e78" height="400">
 
 ### Order
-<img src="https://github.com/user-attachments/assets/a2907624-71f1-4ead-b95f-bd92f01d87c5" width="400">
+<img src="https://github.com/user-attachments/assets/a2907624-71f1-4ead-b95f-bd92f01d87c5" height="400">
 
 ### Profile
-<img src="https://github.com/user-attachments/assets/04433c39-4b6a-46b1-819a-f2598551fd74" width="400">
+<img src="https://github.com/user-attachments/assets/04433c39-4b6a-46b1-819a-f2598551fd74" height="400">
 
 ## 🚀 Hướng Dẫn Cài Đặt
 1. Clone repository:
