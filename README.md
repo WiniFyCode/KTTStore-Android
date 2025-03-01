@@ -72,6 +72,32 @@ KTT Store là một ứng dụng thương mại điện tử được phát tri�
 - Kết nối internet
 - Quyền truy cập: Camera, Bộ nhớ, Vị trí
 
+## Giao diện
+### Login
+![Screenshot 2025-02-15 201823](https://github.com/user-attachments/assets/83f5d69f-f560-4f53-a56d-f674d94bd46c)
+
+### Register
+![Screenshot 2025-02-15 201843](https://github.com/user-attachments/assets/689b6c62-44dd-4cc8-900c-ca3b20137871)
+
+### Forgot Password
+![Screenshot 2025-02-15 201857](https://github.com/user-attachments/assets/c09620fc-7d05-4986-bd2b-b095935beb46)
+![Screenshot 2025-02-15 201919](https://github.com/user-attachments/assets/1af7c952-7b03-4495-941c-e14df6214f67)
+
+### Home
+![Screenshot 2025-02-15 214755](https://github.com/user-attachments/assets/da481017-d36b-4a87-a999-a69c54eecaa6)
+
+### Favorite
+![Screenshot 2025-02-15 195704](https://github.com/user-attachments/assets/dfd88154-af44-4574-84a4-5e12ebca26e0)
+
+### Cart
+![Screenshot 2025-02-15 195751](https://github.com/user-attachments/assets/20f64b40-901d-49b1-a442-158e1d584e78)
+
+### Order
+![Screenshot 2025-02-15 201012](https://github.com/user-attachments/assets/a2907624-71f1-4ead-b95f-bd92f01d87c5)
+
+### Profile
+![Screenshot 2025-02-15 201636](https://github.com/user-attachments/assets/04433c39-4b6a-46b1-819a-f2598551fd74)
+
 ## 🚀 Hướng Dẫn Cài Đặt
 1. Clone repository:
 
