@@ -120,4 +120,5 @@ Mọi đóng góp đều được hoan nghênh! Vui lòng:
 5. Mở Pull Request
 
 ## 📞 Liên Hệ & Hỗ Trợ
-- Email: kttstore3cg@gmail.com
+- Email: thanh23102005@gmail.com
+- GitHub: [@WiniFyCode](https://github.com/WiniFyCode)
